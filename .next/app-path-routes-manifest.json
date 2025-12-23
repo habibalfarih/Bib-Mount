@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/adventure/page": "/adventure",
+  "/book/page": "/book",
+  "/buy/page": "/buy",
+  "/camping/page": "/camping",
+  "/contact/page": "/contact",
+  "/guides/page": "/guides",
+  "/hiking/page": "/hiking",
+  "/page": "/",
+  "/safety/page": "/safety",
+  "/sell/page": "/sell",
+  "/teambuilding/page": "/teambuilding"
+}
