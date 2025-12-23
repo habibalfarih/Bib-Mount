@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "BibMount Explorer",
     images: [
       {
-        url: "/og-image.png",
+        url: "/bibmount.png",
         width: 1200,
         height: 630,
         alt: "BibMount Explorer",
