@@ -1,17 +1,29 @@
 import Link from "next/link"
-import { Mountain, Instagram, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { Instagram, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
-              <Mountain className="h-8 w-8" />
+            <Link
+              href="/"
+              className="flex items-center gap-3 text-xl font-bold text-primary"
+            >
+              <Image
+                src="/bibmount.png"
+                alt="BibMount Explorer"
+                width={80}
+                height={42}
+                className="transition-transform hover:scale-105"
+              />
               <span>BibMount Explorer</span>
             </Link>
+
             <p className="text-sm text-muted-foreground">
               Your ultimate outdoor adventure companion. Explore, book, and gear up for your next journey into the wild.
             </p>
@@ -95,6 +107,7 @@ export function Footer() {
               </a>
             </div>
           </div>
+
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">

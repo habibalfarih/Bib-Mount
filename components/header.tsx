@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
-import { Menu, X, Mountain } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
@@ -11,9 +12,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
-          <Mountain className="h-8 w-8" />
-          <span>BibMount Explorer</span>
+
+        {/* LOGO */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 font-bold text-primary"
+        >
+          <Image
+            src="/bibmount.png"
+            alt="BibMount Explorer"
+            width={80}
+            height={50}
+            priority
+            className="transition-transform hover:scale-105"
+          />
+          <span className="text-xl">BibMount Explorer</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -88,7 +101,11 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
